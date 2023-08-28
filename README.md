@@ -49,7 +49,10 @@ URL: http://localhost:8888
 example: [jupyter/notebook/pyspark.ipynb](jupyter/notebook/pyspark.ipynb)
 
 ### Deployment Success
-Private URL: http://10.10.65.64
+Private URL: http://10.10.67.234
+
+### Access VM
+ssh -i yusuf.pem ubuntu@10.10.67.234
 
 ### Contribute
 * Warung Rafly
