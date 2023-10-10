@@ -2,15 +2,16 @@
 
 ## Software
 
-* [Hadoop 3.3.4](https://hadoop.apache.org/)
+- [Hadoop 3.3.4](https://hadoop.apache.org/)
 
-* [Hive 3.1.3](http://hive.apache.org/)
+- [Hive 3.1.3](http://hive.apache.org/)
 
-* [Spark 3.3.1](https://spark.apache.org/)
+- [Spark 3.3.1](https://spark.apache.org/)
 
 ## Quick Start
 
 To deploy the cluster, run:
+
 ```
 make
 docker-compose up
@@ -33,6 +34,7 @@ NodeManager1: http://localhost:8042
 NodeManager2: http://localhost:8043
 
 ### Spark
+
 master: http://localhost:8080
 
 worker1: http://localhost:8081
@@ -41,20 +43,25 @@ worker2: http://localhost:8082
 history: http://localhost:18080
 
 ### Hive
+
 URI: jdbc:hive2://localhost:10000
 
 ### Jupyter Notebook
+
 URL: http://localhost:8888
 
 example: [jupyter/notebook/pyspark.ipynb](jupyter/notebook/pyspark.ipynb)
 
 ### Deployment Success
+
 Private URL: http://10.10.67.234
 
 ### Access VM
+
 ssh -i yusuf.pem ubuntu@10.10.67.234
 
 ### Contribute
-* Warung Rafly
-* Mang Yusuf
-* BDA
+
+- Warung Rafly
+- Mang Yusuf
+- BDA
