@@ -122,7 +122,7 @@ RUN set -x \
  && tar -xf /tmp/sqoop.tar.gz -C $SQOOP_HOME --strip-components 1 \
  && rm /tmp/sqoop*
 
-ENV SQOOP_HOME_DIR /opt/sqoop/conf
+ENV SQOOP_CONF_DIR /opt/sqoop/conf
 ENV PATH $PATH:$SQOOP_HOME/bin
 
 # Config
@@ -137,7 +137,7 @@ COPY --chown=$USERNAME:$GROUPNAME conf/hive-site.xml $HIVE_CONF_DIR/
 COPY --chown=$USERNAME:$GROUPNAME conf/sqoop-site.xml $SQOOP_CONF_DIR/
 
 RUN ln $HADOOP_CONF_DIR/workers $SPARK_CONF_DIR/ \
- && ln $HIVE_CONF_DIR/hive-site.xml $SPARK_CONF_DIR/
+ && ln $HIVE_CONF_DIR/hive-site.xml $SPARK_CONF_DIR/ 
 
 # Entry point
 COPY entrypoint.sh /usr/local/sbin/entrypoint.sh

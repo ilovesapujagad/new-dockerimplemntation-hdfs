@@ -2,33 +2,59 @@
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
 
 <configuration>
-    <property>
-        <name>sqoop.metastore.client.record.password</name>
-        <value>true</value>
-    </property>
     <!--To be able to run Hive via JDBC as root-->
     <property>
         <name>sqoop.job.data.input.directory</name>
         <value></value>
     </property>
+
     <property>
         <name>sqoop.export.records.per.statement</name>
         <value>10000</value>
     </property>
+
     <property>
         <name>sqoop.metastore.server.location</name>
         <value>*</value>
     </property>
+
     <property>
         <name>sqoop.metastore.client.autoconnect</name>
         <value>true</value>
     </property>
+
     <property>
         <name>sqoop.metastore.auto.populate</name>
         <value>true</value>
     </property>
+
     <property>
         <name>sqoop.metastore.client.connection.manager</name>
         <value>org.apache.sqoop.core.metastore.hsqldb.HsqldbMetaConnectIncrementalUpdateManager</value>
+    </property>
+
+    <property>
+        <name>sqoop.metastore.client.record.password</name>
+        <value>true</value>
+    </property>
+
+    <property>
+        <name>sqoop.metastore.client.autoconnect.url</name>
+        <value>jdbc:sqlserver://10.10.65.261:1433;databaseName=master</value>
+    </property>
+
+    <property>
+        <name>sqoop.metastore.client.connect.driver</name>
+        <value>com.microsoft.sqlserver.jdbc.SQLServerDriver</value>
+    </property>
+
+    <property>
+        <name>sqoop.metastore.client.connect.username</name>
+        <value>sa</value>
+    </property>
+
+    <property>
+        <name>sqoop.metastore.client.connect.password</name>
+        <value>2wsx1qaz!@</value>
     </property>
 </configuration>
